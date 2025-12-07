@@ -4,6 +4,9 @@
         {
             "src": "app.py",
             "use": "@vercel/python"
+            "config": {
+                "includeFiles": "public/**"
+            }
         }
     ],
     "routes": [
@@ -12,4 +15,5 @@
           "dest": "app.py"
         }
     ]
+
 }

@@ -170,9 +170,8 @@ def create_rich_menu_1():
             rich_menu_request=rich_menu_to_create
         ).rich_menu_id
 
-        dir_path = os.path.dirname(__file__)
-        image_path = os.path.join(dir_path, 'public', 'richmenu_1.jpg')
-        with open(image_path, 'rb') as image:
+        
+        with open('richmenu_1.jpg', 'rb') as image:
             line_bot_blob_api.set_rich_menu_image(
                 rich_menu_id=rich_menu_id,
                 body=bytearray(image.read()),
@@ -234,5 +233,6 @@ create_rich_menu_1()
 if __name__ == "__main__":
 
     app.run(port=5000,debug=True)
+
 
 
